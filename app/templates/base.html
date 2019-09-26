@@ -1,0 +1,27 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - SushiBot</title>
+      {% else %}
+      <title>Welcome to SushiBot</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+            SushiBot: 
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('connect.index') }}">Login</a>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Settings for {{ current_user.username }}</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.frequency.label }}<br>
+            {{ form.frequency() }}
+        </p>
+        <p>
+            {{ form.like_all() }}
+            {{ form.like_all.label }}
+            
+        </p>
+        <p>
+            {{ form.follow_back() }}
+            {{ form.follow_back.label }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
