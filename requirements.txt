@@ -16,7 +16,7 @@ Flask-WTF==0.14.2
 idna==2.8
 inflect==2.1.0
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 libarchive-c==2.8
 Mako==1.1.0
 markovify==0.7.2
